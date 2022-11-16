@@ -1,0 +1,19 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 1;
+  visibility: visible;
+  background-color: $backdrop-bg-color;
+  transition: opacity 250ms $timing-function, visibility 250ms $timing-function 250ms;
+
+&.backdrop--is_hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  }
+}

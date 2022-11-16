@@ -1,0 +1,30 @@
+.team {
+  background-color: $secondary-bg-color;
+}
+.team-list {
+  @extend %list;
+  display: flex;
+  margin-left: calc(-1 * $primary-gap-size);
+&__item {
+  flex-basis: calc(100% / 4 - $primary-gap-size);
+  margin-left: $primary-gap-size;
+
+  font-size: 16px;
+  line-height: 1.19;
+  background-color: $primary-white-color;
+
+  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: $teamcard-box-shadow;
+}
+&__thumb {
+  padding: 30px 32px;
+}
+&__title {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  color: $secondary-text-color;
+}
+}

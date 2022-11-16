@@ -1,0 +1,49 @@
+.page-footer {
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  background-color: $primary-bg-color;
+&__container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+}
+.contacts {
+  max-width: 231px;
+  margin-right: 70px;
+}
+.address-list {
+  @extend %list;
+  margin-top: 20px;
+  padding-right: 22px;
+&__link {
+  @extend %link;
+  color: $footer-contacts-color;
+
+  transition: color 250ms $timing-function;
+}
+&__link--white {
+  color: $primary-white-color;
+}
+&__link:hover,
+&__link:focus {
+  color: $primary-accent-color;
+}
+& &__item + &__item {
+  margin-top: 9px;
+}
+}
+.follow {
+  margin-right: 93px;
+&__label {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+}

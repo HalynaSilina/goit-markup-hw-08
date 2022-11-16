@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+  background-color: $primary-white-color;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0 auto;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}

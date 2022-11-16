@@ -1,0 +1,67 @@
+.card-set {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * $primary-gap-size);
+  margin-top: calc(-1 * $primary-gap-size);
+&__item {
+  flex-basis: calc(100% / 3 - $primary-gap-size);
+  margin-left: $primary-gap-size;
+  margin-top: $primary-gap-size;
+
+  transition: box-shadow 250ms $timing-function;
+}
+&__item:hover {
+  box-shadow: $projects-hover-shadow;
+}
+&__link {
+  @extend %link;
+}
+}
+.project {
+&__thumb {
+  position: relative;
+  overflow: hidden;
+}
+&__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  opacity: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.55;
+  color: $projects-thumb-text;
+  background-color: $projects-thumb-bg;
+
+  transition: transform 250ms $timing-function, opacity 250ms $timing-function;
+}
+.card-set__link:hover &__description,
+.card-set__link:focus &__description {
+  transform: translateY(0%);
+  opacity: 1;
+}
+&__content {
+  padding: 20px 24px;
+  
+  border: 1px solid $project-border-color;
+}
+&__title {
+  margin-bottom: 4px;
+  
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $secondary-text-color;
+}
+&__text {
+  font-size: 16px;
+  line-height: 1.87;
+}
+}

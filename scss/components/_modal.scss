@@ -1,0 +1,44 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  
+  max-width: 528px;
+  min-height: 581px;
+
+  background-color: $primary-white-color;
+  box-shadow: $modal-window-shadow;
+  border-radius: 4px;
+  transition: transform 250ms $timing-function;
+
+.backdrop.backdrop--is_hidden & {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+&__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  color: $primary-black-color;
+  background-color: $primary-white-color;
+  border: 1px solid $modal-button-border;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 250ms $timing-function;
+}
+&__button:hover,
+&__button:focus {
+  color: $primary-accent-color;
+}
+&__icon {
+  width: 18px;
+  height: 18px;
+
+  fill: currentColor;
+}
+}

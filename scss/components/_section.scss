@@ -1,0 +1,29 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+&--no_padding {
+  padding-bottom: 0;
+}
+&__title {
+  margin-bottom: 50px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  color: $secondary-text-color;
+}
+&__title--visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+}

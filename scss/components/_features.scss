@@ -1,0 +1,28 @@
+.feature-list {
+  @extend %list;
+  display: flex;
+  margin-left: calc(-1 * $primary-gap-size);
+&__item {
+  flex-basis: calc(100% / 4 - $primary-gap-size);
+  margin-left: $primary-gap-size;
+}
+&__thumb {
+  margin-bottom: $primary-gap-size;
+  width: 270px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $secondary-bg-color;
+}
+&__title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: $secondary-text-color;
+  text-transform: uppercase;
+}
+}
