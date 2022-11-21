@@ -3,20 +3,22 @@
   padding-top: 60px;
 
   background-color: $primary-bg-color;
-&__container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
+  text-align: center;
+// &__container {
+//   display: flex;
+//   align-items: baseline;
+//   justify-content: space-between;
+// }
 }
 .contacts {
-  max-width: 231px;
-  margin-right: 70px;
+  margin-bottom: 60px;
+  // max-width: 231px;
+  // margin-right: 70px;
 }
 .address-list {
   @extend %list;
   margin-top: 20px;
-  padding-right: 22px;
+  // padding-right: 22px;
 &__link {
   @extend %link;
   color: $footer-contacts-color;
@@ -31,11 +33,12 @@
   color: $primary-accent-color;
 }
 & &__item + &__item {
-  margin-top: 9px;
+  margin-top: 8px;
 }
 }
 .follow {
-  margin-right: 93px;
+  margin-bottom: 60px;
+  // margin-right: 93px;
 &__label {
   margin-bottom: 20px;
 

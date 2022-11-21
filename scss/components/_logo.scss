@@ -1,14 +1,18 @@
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: calc(28/24);
   color: $primary-accent-color;
   text-decoration: none;
-&__text {
-  color: $primary-black-color;
+  &__text {
+    color: $primary-black-color;
+  }
+  &__footer {
+   color: $primary-white-color;
+  }
 }
-&__footer {
-  color: $primary-white-color;
-}
+  .page-header__logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }

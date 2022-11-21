@@ -3,11 +3,13 @@
 }
 .team-list {
   @extend %list;
-  display: flex;
-  margin-left: calc(-1 * $primary-gap-size);
+  // display: flex;
+  // margin-left: calc(-1 * $primary-gap-size);
 &__item {
-  flex-basis: calc(100% / 4 - $primary-gap-size);
-  margin-left: $primary-gap-size;
+  width: 100%;
+  margin-bottom: $primary-gap-size;
+  // flex-basis: calc(100% / 4 - $primary-gap-size);
+  // margin-left: $primary-gap-size;
 
   font-size: 16px;
   line-height: 1.19;
@@ -18,7 +20,9 @@
   box-shadow: $teamcard-box-shadow;
 }
 &__thumb {
-  padding: 30px 32px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  // padding: 30px 32px;
 }
 &__title {
   margin-bottom: 10px;
