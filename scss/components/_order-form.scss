@@ -9,7 +9,7 @@
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: calc(30/20);
   color: $form-title-color;
 }
 &__field {
@@ -66,14 +66,17 @@
   transition: border-color 250ms $timing-function;
 }
 &__textarea:hover,
-&__textarea:focus,
+&__textarea:focus {
+  border-color: $primary-accent-color;
+  outline-color: $primary-accent-color;
+}
 &__textarea:active {
   border-color: $primary-accent-color;
   outline-color: $primary-accent-color;
 }
 &__textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 14px;
+  line-height: calc(16/14);
   letter-spacing: 0.01em;
   color: $placeholder-text-color;
 }
@@ -110,11 +113,15 @@
   align-items: center;
   margin-top: 10px;
   margin-bottom: 30px;
+
+  font-size: 12px;
+line-height: calc(14/12);
 &__link {
+  @extend %link;
   margin-left: 4px;
 
   color: $primary-accent-color;
-  }
+   }
 &__input {
   position: absolute;
   white-space: nowrap;

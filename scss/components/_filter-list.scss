@@ -1,9 +1,16 @@
 .filter-list {
   @extend %list;
+margin-right: 120px;
+margin-bottom: 40px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  gap: 8px;
+  flex-wrap: wrap;
+  // justify-content: center;
+  // margin-bottom: 50px;
+  // gap: 8px;
+  &__item {
+  margin-right: 8px;
+  margin-bottom: 15px;
+  }
 &__button {
   padding: 6px 22px;
 

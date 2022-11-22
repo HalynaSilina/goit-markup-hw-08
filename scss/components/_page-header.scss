@@ -2,6 +2,7 @@
   position: relative;
   
   margin-bottom: 0;
+  min-width: 100vw;
   border-bottom: 1px solid $header-border-color;
 &__container {
   display: flex;

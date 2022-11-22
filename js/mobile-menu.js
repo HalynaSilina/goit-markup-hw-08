@@ -2,12 +2,14 @@
   const mobileMenu = document.querySelector('.menu');
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
+  const mobileBtn = document.querySelector('.menu__button');
 
   const toggleMenu = () => {
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('menu--is-open');
+    mobileBtn.classList.toggle('menu__button--is-open');
 
     const scrollLockMethod = !isMenuOpen
       ? 'disableBodyScroll'
@@ -22,6 +24,7 @@
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
     mobileMenu.classList.remove('menu--is-open');
+    mobileMenu.classList.remove('menu__button--is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
   });

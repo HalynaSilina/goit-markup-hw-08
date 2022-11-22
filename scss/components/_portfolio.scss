@@ -1,13 +1,15 @@
 .card-set {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * $primary-gap-size);
-  margin-top: calc(-1 * $primary-gap-size);
+  width: 100%;
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-left: calc(-1 * $primary-gap-size);
+  // margin-top: calc(-1 * $primary-gap-size);
 &__item {
-  flex-basis: calc(100% / 3 - $primary-gap-size);
-  margin-left: $primary-gap-size;
-  margin-top: $primary-gap-size;
+  margin-bottom: $primary-gap-size;
+  // flex-basis: calc(100% / 3 - $primary-gap-size);
+  // margin-left: $primary-gap-size;
+  // margin-top: $primary-gap-size;
 
   transition: box-shadow 250ms $timing-function;
 }

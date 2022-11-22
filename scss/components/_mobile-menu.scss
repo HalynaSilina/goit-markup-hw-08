@@ -67,7 +67,19 @@
   &__icon--close {
     fill: currentColor;
   }
-  &.menu--is-open ~ &__icon--close {
+  &__button &__icon--open {
+    display: block;
+  }
+  &__button &__icon--close {
     display: none;
+  }
+  &__button--is-open {
+    color: $primary-black-color;
+  }
+  &__button.menu__button--is-open &__icon--open {
+    display: none;
+  }
+  &__button.menu__button--is-open &__icon--close {
+    display: block;
   }
 }
