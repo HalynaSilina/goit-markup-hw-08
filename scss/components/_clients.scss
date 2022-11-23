@@ -12,8 +12,9 @@
 &__link {
   @extend %link;
   display: flex;
-  width: 210px;
-  height: 92px;
+  // padding: 16px 52px;
+  width: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
 
