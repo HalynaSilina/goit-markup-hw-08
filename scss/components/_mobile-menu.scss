@@ -1,9 +1,9 @@
 .menu {
-  
-  @media screen and (max-width: 767px) {
-      display: none;
+  display: none;
+  @media screen and (min-width: 767px) {
+    display: flex;
+  }
 
-      background-color: $primary-white-color;
   &.menu--is-open {
     position: absolute;
     top: 0;
@@ -11,76 +11,61 @@
 
     display: block;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     padding: 48px 40px;
+
+    background-color: $primary-white-color;
   }
-}
-    @media screen and (min-width: 768px) {
-        display: flex;
+  &__button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: transparent;
+    border: none;
+    @media screen and (min-width: 767px) {
+      display: none;
     }
   }
+  &__button:hover {
+    color: $primary-accent-color;
+  }
+  &__button &__icon--open {
+    display: block;
+  }
+  &__button &__icon--close {
+    display: none;
+  }
+  &__button.menu__button--is-open &__icon--open {
+    display: none;
+  }
+  &__button.menu__button--is-open &__icon--close {
+    display: block;
+  }
+  &__icon--open,
+  &__icon--close {
+    fill: currentColor;
+  }
+}
 .menu-list {
   @extend %list;
-  display: inline-flex;
-  @media screen and (min-width: 768px) {
-      display: none;
+  display: flex;
+
+  &__item:not(:first-child) {
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid $form-input-border;
   }
-}
-&__item {
-  margin-right: 10px;
-}
-&__item::after {
-  content: "";
+  &__link {
+    @extend %link;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
 
-  width: 1px;
-  height: 22px;
-  margin-right: 10px;
-  background-color: $form-input-border;
-}
-&__link {
-  @extend %link;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: calc(22 / 18);
-  letter-spacing: 0.02em;
-
-  color: $primary-accent-color;
-}
-&__button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  @media screen and (min-width: 768px) {
-      display: none;
+    color: $primary-accent-color;
   }
-}
-&__button:hover,
-&__button:focus {
-  color: $primary-accent-color;
-}
-&__icon--open,
-&__icon--close {
-  fill: currentColor;
-}
-&__button &__icon--open {
-  display: block;
-}
-&__button &__icon--close {
-  display: none;
-}
-&__button--is-open {
-  color: $primary-black-color;
-}
-&__button.menu__button--is-open &__icon--open {
-  display: none;
-}
-&__button.menu__button--is-open &__icon--close {
-  display: block;
 }
