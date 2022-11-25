@@ -1,0 +1,112 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  padding: 40px;
+
+  background-color: $primary-white-color;
+  box-shadow: $modal-window-shadow;
+  border-radius: 4px;
+
+  transition: transform 250ms $timing-function;
+  .backdrop.backdrop--is_hidden & {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  &__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $primary-black-color;
+    background-color: $primary-white-color;
+    border: 1px solid $modal-button-border;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &__button:hover {
+    color: $primary-accent-color;
+  }
+  &__icon {
+    fill: currentColor;
+  }
+}
+.order-form {
+  width: 100%;
+
+  text-align: center;
+  &__title {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(30 / 20);
+    text-align: center;
+
+    color: $secondary-text-color;
+  }
+  &__field {
+    position: relative;
+
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  &__label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+  }
+  &__input {
+    margin-bottom: 10px;
+    padding: 11px 30px;
+
+    border: 1px solid $form-input-border;
+    border-radius: 4px;
+
+    transition: color 250ms $timing-function, border-color 250ms $timing-function;
+  }
+  &__input:hover,
+  &__input:focus {
+    color: $primary-black-color;
+    border-color: $primary-accent-color;
+    outline-color: $primary-accent-color;
+  }
+  &__input:active {
+    color: $primary-black-color;
+    border-color: $primary-accent-color;
+    outline-color: $primary-accent-color;
+  }
+  &__icon {
+    position: absolute;
+
+    top: 50%;
+    left: 12px;
+    fill: $form-title-color;
+  }
+  &__textarea {
+    border: 1px solid $form-input-border;
+    border-radius: 4px;
+  }
+  &__button {
+  }
+}
+.subscription-checkbox {
+  &__link {
+  }
+  &__input {
+  }
+  &__icon {
+  }
+}
