@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 16px;
+  margin-right: -10px;
   &__link {
     @extend %link;
     width: 44px;
@@ -11,9 +12,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    margin-right: 10px;
 
     color: $primary-icons-color;
+    border-radius: 50%;
+  }
+  &__link--dark_theme {
+    color: $primary-white-color;
+    background-color: $follow-link-bg;
   }
   &__icon {
     fill: currentColor;
