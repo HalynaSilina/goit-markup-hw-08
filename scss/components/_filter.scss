@@ -1,18 +1,21 @@
+.portfolio {
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+}
 .filter-list {
   @extend %list;
   display: inline-flex;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     flex-wrap: wrap;
     margin-bottom: 40px;
   }
   @media screen and (min-width: 768px) {
-    // display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 30px;
   }
   &__item {
     margin-right: 8px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 15px;
     }
   }
