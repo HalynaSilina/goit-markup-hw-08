@@ -3,13 +3,25 @@
 }
 .team-list {
   @extend %list;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: calc(-1 * $primary-gap-size);
+    margin-left: calc(-1 * $half-gap-size);
+    margin-right: calc(-1 * $half-gap-size);
+  }
   &__item {
     width: 100%;
-margin-bottom: $primary-gap-size;
+    margin-bottom: $primary-gap-size;
 
     background-color: $primary-white-color;
     box-shadow: $teamcard-box-shadow;
     border-radius: 0px 0px 4px 4px;
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - 2 * $half-gap-size);
+      margin-left: $half-gap-size;
+      margin-right: $half-gap-size;
+    }
   }
   &__thumb {
     padding-top: $primary-gap-size;

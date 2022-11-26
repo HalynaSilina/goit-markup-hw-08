@@ -1,8 +1,19 @@
 .feature-list {
   @extend %list;
   width: 100%;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: calc(-1 * $primary-gap-size);
+    margin-right: calc(-1 * $half-gap-size);
+  }
   &__item {
     margin-bottom: $primary-gap-size;
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - 2 * $half-gap-size);
+      margin-left: $half-gap-size;
+      margin-right: $half-gap-size;
+    }
   }
   &__thumb {
     margin-bottom: $primary-gap-size;
@@ -24,5 +35,8 @@
     color: $secondary-text-color;
     text-align: center;
     text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
 }

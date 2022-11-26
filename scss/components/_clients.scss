@@ -3,11 +3,16 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: calc(-1 * $primary-gap-size);
-  margin-right: calc(-1 * $primary-gap-size);
+  margin-left: calc(-1 * $half-gap-size);
+  margin-right: calc(-1 * $half-gap-size);
   &__item {
-    flex-basis: calc(100% / 2 - $primary-gap-size);
+    flex-basis: calc(100% / 2 - 2 * $half-gap-size);
     margin-bottom: $primary-gap-size;
-    margin-right: $primary-gap-size;
+    margin-left: $half-gap-size;
+    margin-right: $half-gap-size;
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 3 - 2 * $half-gap-size);
+    }
   }
   &__link {
     @extend %link;
@@ -20,7 +25,7 @@
     color: $primary-icons-color;
     border: 1px solid $primary-icons-color;
     border-radius: 4px;
-    
+
     transition: color 250ms $timing-function, border-color 250ms $timing-function;
   }
   &__link:hover,

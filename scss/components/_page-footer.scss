@@ -1,9 +1,19 @@
 .page-footer {
   background-color: $primary-bg-color;
   text-align: center;
+  &__container--tablet {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+      margin-bottom: 60px;
+    }
+  }
 }
 .contacts {
-  margin-bottom: 60px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
+  }
 }
 .address-list {
   @extend %list;
@@ -19,7 +29,9 @@
   }
 }
 .follow {
-  margin-bottom: 60px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
+  }
   &__label {
     margin-bottom: 20px;
 
@@ -35,6 +47,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  &__label {
+    display: flex;
+    flex-direction: column;
+  }
   &__input {
     width: 100%;
     margin-bottom: 20px;
@@ -50,9 +66,9 @@
     border: 1px solid $footer-form-border;
     box-shadow: $button-box-shadow;
     border-radius: 4px;
-     @media screen and (min-width: 480px) {
-    width: 450px;
-  }
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
   }
   &__icon {
     margin-left: 12px;
