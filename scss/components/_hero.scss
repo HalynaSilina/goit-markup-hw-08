@@ -1,6 +1,7 @@
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
+  margin: 0 auto;
 
   background-color: $hero-bg-color;
   background-image: linear-gradient($hero-gradient, $hero-gradient), url('../images/mobile/header@2x.jpg');
@@ -12,6 +13,10 @@
   }
   @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
     background-image: linear-gradient($hero-gradient, $hero-gradient), url('../images/mobile/header@3x.jpg');
+  }
+   @media screen and (min-width: 480px) {
+    width: 480px;
+    height: 400px;
   }
   &__title {
     margin-bottom: $primary-gap-size;

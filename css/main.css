@@ -399,7 +399,7 @@ svg {
 .menu {
   display: none;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -427,7 +427,7 @@ svg {
   background-color: transparent;
   border: none;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .menu__button {
     display: none;
   }
@@ -468,12 +468,38 @@ svg {
   letter-spacing: 0.02em;
   color: #2196f3;
 }
+@media screen and (min-width: 768px) {
+  .menu-list {
+    display: none;
+  }
+}
 
 .site-nav {
   margin-bottom: calc(50vh - 96px);
 }
-.site-nav__item:not(:last-child) {
-  margin-bottom: 32px;
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 .site-nav__link {
   font-weight: 500;
@@ -482,8 +508,28 @@ svg {
   letter-spacing: 0.02em;
   color: #212121;
 }
+@media screen and (min-width: 768px) {
+  .site-nav__link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
+}
 .site-nav__link--current {
+  position: relative;
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: #2196f3;
+}
+.site-nav__link--current::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: " ";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
 }
 
 .contact-list {
@@ -497,8 +543,25 @@ svg {
   margin-top: auto;
   margin-bottom: 64px;
 }
+@media screen and (min-width: 768px) {
+  .contact-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    margin-left: 96px;
+  }
+}
 .contact-list__item:not(:first-child) {
   margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .contact-list__item:not(:first-child) {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
 }
 .contact-list__link {
   font-weight: 500;
@@ -506,18 +569,41 @@ svg {
   line-height: 1.1666666667;
   letter-spacing: 0.02em;
 }
-.contact-list__link--accent {
-  font-size: 34px;
-  line-height: 1.1764705882;
-  color: #2196f3;
+@media screen and (min-width: 768px) {
+  .contact-list__link {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-list__link--accent {
+    font-size: 34px;
+    line-height: 1.1764705882;
+    color: #2196f3;
+  }
 }
 .contact-list__icon {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .contact-list__icon {
+    margin-right: 8px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
+  margin: 0 auto;
   background-color: #c4c4c4;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile/header@2x.jpg");
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/header@2x.jpg");
@@ -535,6 +621,12 @@ svg {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile/header@3x.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/header@3x.jpg");
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero {
+    width: 480px;
+    height: 400px;
   }
 }
 .hero__title {
@@ -976,6 +1068,11 @@ svg {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+@media screen and (min-width: 480px) {
+  .follow-form__input {
+    width: 450px;
+  }
 }
 .follow-form__icon {
   margin-left: 12px;

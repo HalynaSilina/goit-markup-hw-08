@@ -50,6 +50,9 @@
     border: 1px solid $footer-form-border;
     box-shadow: $button-box-shadow;
     border-radius: 4px;
+     @media screen and (min-width: 480px) {
+    width: 450px;
+  }
   }
   &__icon {
     margin-left: 12px;

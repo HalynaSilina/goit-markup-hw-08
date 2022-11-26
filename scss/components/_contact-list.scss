@@ -4,8 +4,18 @@
   flex-direction: column-reverse;
   margin-top: auto;
   margin-bottom: 64px;
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    margin-left: 96px;
+  }
   &__item:not(:first-child) {
     margin-bottom: 32px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
   }
   &__link {
     @extend %link;
@@ -13,13 +23,25 @@
     font-size: 24px;
     line-height: calc(28 / 24);
     letter-spacing: 0.02em;
+    @media screen and (min-width: 768px) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
   }
   &__link--accent {
-    font-size: 34px;
-    line-height: calc(40 / 34);
-    color: $primary-accent-color;
+    @media screen and (max-width: 767px) {
+      font-size: 34px;
+      line-height: calc(40 / 34);
+      color: $primary-accent-color;
+    }
   }
   &__icon {
     display: none;
+    @media screen and (min-width: 768px) {
+      margin-right: 8px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
