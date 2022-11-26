@@ -1,0 +1,27 @@
+.filter-list {
+  @extend %list;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  &__item {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+  &__button {
+    padding: 6px 22px;
+    min-width: 73px;
+
+    color: $secondary-text-color;
+    background-color: $secondary-bg-color;
+    transition: color 250ms $timing-function, background-color 250ms $timing-function;
+  }
+  &__button:hover,
+  &__button:focus {
+    color: $primary-white-color;
+    background-color: $primary-accent-color;
+  }
+  &__button:active {
+    color: $primary-white-color;
+    background-color: $primary-accent-color;
+  }
+}
