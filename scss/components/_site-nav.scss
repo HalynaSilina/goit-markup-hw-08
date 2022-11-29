@@ -3,11 +3,10 @@
   margin-bottom: calc((100vh / 2) - (48px * 2));
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 0;
   }
-  &__item:not(:last-child) {
+   &__item:not(:last-child) {
     @media screen and (max-width: 767px) {
       margin-bottom: 32px;
     }
@@ -27,6 +26,16 @@
     @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: calc(16 / 14);
+    }
+    @media screen and (min-width: 1200px) {
+      transition: color 250ms $timing-function;
+      &:hover,
+      &:focus {
+        color: $primary-accent-color;
+      }
+      &:active {
+        color: $primary-accent-color;
+      }
     }
   }
   &__link--current {

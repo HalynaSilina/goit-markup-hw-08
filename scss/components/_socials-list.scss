@@ -16,6 +16,18 @@
 
     color: $primary-icons-color;
     border-radius: 50%;
+    @media screen and (min-width: 1200px) {
+      transition: background-color 250ms $timing-function, color 250ms $timing-function;
+      &:hover,
+      &:focus {
+        color: $primary-white-color;
+        background-color: $primary-accent-color;
+      }
+      &:active {
+        color: $primary-white-color;
+        background-color: $primary-accent-color;
+      }
+    }
   }
   &__link--dark_theme {
     color: $primary-white-color;

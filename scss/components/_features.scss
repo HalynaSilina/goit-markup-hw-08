@@ -1,18 +1,27 @@
 .feature-list {
   @extend %list;
-  width: 100%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: calc(-1 * $primary-gap-size);
-    margin-right: calc(-1 * $half-gap-size);
+    margin-left: calc(-1 * $primary-gap-size);
   }
   &__item {
-    margin-bottom: $primary-gap-size;
     @media screen and (min-width: 768px) {
-      flex-basis: calc(100% / 2 - 2 * $half-gap-size);
-      margin-left: $half-gap-size;
-      margin-right: $half-gap-size;
+      margin-bottom: $primary-gap-size;
+      flex-basis: calc((100% - 2 * $primary-gap-size) / 2);
+      margin-left: $primary-gap-size;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 4 * $primary-gap-size) / 4);
+    }
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: $primary-gap-size;
+      }
     }
   }
   &__thumb {

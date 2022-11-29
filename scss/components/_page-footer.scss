@@ -1,8 +1,12 @@
 .page-footer {
   background-color: $primary-bg-color;
   text-align: center;
-  &__container--tablet {
-    @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
+  @media screen and (min-width: 768px) {
+      &__container--tablet {
       display: flex;
       justify-content: space-around;
       align-items: baseline;
@@ -45,7 +49,6 @@
 }
 .follow-form {
   display: flex;
-  flex-direction: column;
   align-items: center;
   &__label {
     display: flex;

@@ -18,8 +18,11 @@
   border: none;
   cursor: pointer;
   transition: background-color 250ms $timing-function;
+  @media screen and (min-width: 1200px) {
+    padding: 10px 32px;
+  }
   &:hover,
   &:focus {
-    color: $button-order-active;
+    background-color: $button-order-active;
   }
 }
