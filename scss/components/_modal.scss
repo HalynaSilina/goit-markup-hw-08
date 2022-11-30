@@ -20,7 +20,7 @@
   box-shadow: $modal-window-shadow;
   border-radius: 4px;
 
-  transition: transform 250ms $timing-function;
+  transition: transform 250ms $timing-function 250ms;
   .backdrop.backdrop--is_hidden & {
     transform: translate(-50%, -50%) scale(0.8);
   }
