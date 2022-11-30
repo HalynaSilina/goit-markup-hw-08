@@ -21,6 +21,9 @@
     padding: 48px 40px;
 
     background-color: $primary-white-color;
+    @media screen and (max-width: 479px) {
+    padding: 48px 10px;
+  }
   }
   &__button {
     position: absolute;
@@ -30,6 +33,7 @@
 
     width: 40px;
     height: 40px;
+    padding: 0;
 
     background-color: transparent;
     border: none;

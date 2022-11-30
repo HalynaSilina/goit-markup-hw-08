@@ -7,7 +7,9 @@
 
   padding: 40px;
   width: 95vw;
-
+  @media screen and (max-width: 479px) {
+    padding: 40px 10px;
+  }
   @media screen and (min-width: 480px) {
     width: 450px;
   }
@@ -148,6 +150,9 @@
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.03em;
+  @media screen and (max-width: 479px) {
+    width: 75vw;
+  }
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: calc(24 / 14);
@@ -171,14 +176,16 @@
   }
   &__icon {
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 0;
 
-    display: flex;
+    display: block;
     height: 15px;
     width: 16px;
     margin-left: -15px;
     margin-right: 8px;
+
+    align-items: center;
     @media screen and (min-width: 480px) {
       margin-left: -23px;
     }

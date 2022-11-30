@@ -1,22 +1,40 @@
 .page-footer {
   background-color: $primary-bg-color;
   text-align: center;
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: baseline;
+  &__container {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      text-align: left;
+    }
   }
-  @media screen and (min-width: 768px) {
-    &__container--tablet {
+  &__container--tablet {
+    @media screen and (min-width: 768px) {
       display: flex;
       justify-content: space-around;
       align-items: baseline;
       margin-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+      justify-content: start;
+      margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
 .contacts {
   @media screen and (max-width: 767px) {
     margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 90px;
+    margin-bottom: 0;
+  }
+  & > .logo {
+    padding: 0;
+    margin-bottom: 20px;
   }
 }
 .address-list {
@@ -27,6 +45,16 @@
   }
   &__link {
     @extend %link;
+    @media screen and (min-width: 1200px) {
+      transition: color 250ms $timing-function;
+      &:hover,
+      &:focus {
+        color: $primary-accent-color;
+      }
+      &:active {
+        color: $primary-accent-color;
+      }
+    }
   }
   &__link--white {
     color: $primary-white-color;
@@ -35,6 +63,9 @@
 .follow {
   @media screen and (max-width: 767px) {
     margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
   }
   &__label {
     margin-bottom: 20px;
@@ -45,26 +76,31 @@
     text-transform: uppercase;
 
     color: $primary-white-color;
-     @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1200px) {
       margin-bottom: 0;
     }
   }
 }
 .follow-form {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
   &__label {
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 1200px) {
-      text-align: left;
+    width: 100%;
+    @media screen and (max-width: 1199px) {
+      align-items: center;
     }
   }
   &__input {
     width: 100%;
-    margin-bottom: 20px;
     margin-top: 20px;
-    padding: 14px 16px;
+    padding: 15px 16px;
 
     font-style: normal;
     font-weight: 400;
@@ -76,6 +112,7 @@
     border: 1px solid $footer-form-border;
     box-shadow: $button-box-shadow;
     border-radius: 4px;
+    outline-color: $primary-accent-color;
     @media screen and (min-width: 480px) {
       width: 450px;
     }
@@ -86,7 +123,8 @@
     }
   }
   &__button {
-padding: 10px 28px;
+    padding: 10px 28px;
+    border: 1px solid transparent;
   }
   &__icon {
     margin-left: 12px;

@@ -4,16 +4,22 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: calc(-1 * $primary-gap-size);
-    margin-left: calc(-1 * $half-gap-size);
-    margin-right: calc(-1 * $half-gap-size);
+    margin-left: calc(-1 * $primary-gap-size);
   }
   &__item {
-    margin-bottom: $primary-gap-size;
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: $primary-gap-size;
+      }
+    }
     @media screen and (min-width: 768px) {
-      flex-basis: calc(100% / 2 - 2 * $half-gap-size);
-      margin-left: $half-gap-size;
-      margin-right: $half-gap-size;
+      margin-bottom: $primary-gap-size;
+      flex-basis: calc((100% - 2 * $primary-gap-size) / 2);
+      margin-left: $primary-gap-size;
       text-align: left;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 3 * $primary-gap-size) / 3);
     }
   }
   &__link {
@@ -58,13 +64,25 @@
     background-color: $projects-thumb-bg;
 
     transition: transform 250ms $timing-function, opacity 250ms $timing-function;
+     @media screen and (min-width: 480px) {
+      padding: 77px 24px;
+    }
+      @media screen and (min-width: 480px) {
+      padding-left: 24px;
+      padding-top: 49px;
+      padding-right: 24px;
+      padding-bottom: 77px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 63px 24px;
+    }
   }
   &__content {
-    padding: 24px 20px;
+    padding: 20px 24px;
     border: 1px solid $project-border-color;
   }
   &__content--big_padding {
-    @media screen and (min-width: 768px) and (max-width: 1200px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       padding-bottom: 56px;
     }
   }
